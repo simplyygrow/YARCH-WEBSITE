@@ -42,7 +42,18 @@ const fleetItems = [
   },
 ];
 
+import { useEffect } from 'react';
+
 export default function FleetOverlay({ isOpen, onClose }: FleetOverlayProps) {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('fleet-open');
+    } else {
+      document.body.classList.remove('fleet-open');
+    }
+    return () => document.body.classList.remove('fleet-open');
+  }, [isOpen]);
+
   return (
     <AnimatePresence>
       {isOpen && (
