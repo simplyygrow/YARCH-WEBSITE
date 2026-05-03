@@ -36,7 +36,14 @@ export default function Header({ menuOpen, onBlogOpen, onFleetOpen, onJourneysOp
   ];
 
   return (
-    <div ref={pillRef} className="navbar-pill">
+    <div
+      ref={pillRef}
+      className="navbar-pill"
+      style={{
+        transform: menuOpen ? 'translateX(calc(-50% - clamp(280px, 40vw, 440px)))' : 'translateX(-50%)',
+        transition: 'background 0.5s ease, box-shadow 0.5s ease, transform 0.8s cubic-bezier(0.16,1,0.3,1)',
+      }}
+    >
       {/* Logo */}
       <div
         style={{
@@ -102,8 +109,7 @@ export default function Header({ menuOpen, onBlogOpen, onFleetOpen, onJourneysOp
             fontFamily: 'inherit',
             letterSpacing: '0.18em',
             textTransform: 'uppercase',
-            transform: menuOpen ? 'translateX(calc(-1 * clamp(280px, 40vw, 440px)))' : 'none',
-            transition: 'background 0.3s ease, transform 0.3s ease',
+            transition: 'background 0.3s ease',
           }}
         >
           JOIN THE CLUB
