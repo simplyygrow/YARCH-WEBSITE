@@ -40,8 +40,10 @@ export default function Header({ menuOpen, onBlogOpen, onFleetOpen, onJourneysOp
       ref={pillRef}
       className="navbar-pill"
       style={{
-        transform: menuOpen ? 'translateX(calc(-50% - clamp(280px, 40vw, 440px)))' : 'translateX(-50%)',
-        transition: 'background 0.5s ease, box-shadow 0.5s ease, transform 0.8s cubic-bezier(0.16,1,0.3,1)',
+        opacity: menuOpen ? 0 : 1,
+        pointerEvents: menuOpen ? 'none' : 'auto',
+        transform: 'translateX(-50%)',
+        transition: 'all 0.6s cubic-bezier(0.16,1,0.3,1)',
       }}
     >
       {/* Logo */}
