@@ -16,9 +16,9 @@
   --text-primary: #0c0c0e;
   --text-muted: rgba(12,12,14,0.52);
   --text-faint: rgba(12,12,14,0.28);
-  --glass-dark-soft: rgba(255,255,255,0.06);
-  --glass-dark-mid: rgba(255,255,255,0.11);
-  --glass-dark-strong: rgba(255,255,255,0.16);
+  --glass-dark-soft: rgba(12, 12, 16, 0.45);
+  --glass-dark-mid: rgba(12, 12, 16, 0.60);
+  --glass-dark-strong: rgba(12, 12, 16, 0.75);
   --glass-dark-border-soft: rgba(255,255,255,0.08);
   --glass-dark-border-mid: rgba(255,255,255,0.15);
   --font-serif: 'Instrument Serif', ui-serif, serif;
