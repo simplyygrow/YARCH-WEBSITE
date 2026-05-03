@@ -79,8 +79,7 @@ export default function Hero({ fleetOpen, menuOpen }: HeroProps) {
             position: 'absolute',
             top: '50%',
             left: 'clamp(24px, 6vw, 96px)',
-            transform: menuOpen ? 'translateY(-52%) translateX(-120px)' : 'translateY(-52%) translateX(0)',
-            transition: 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
+            transform: 'translateY(-52%)',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'flex-start',
@@ -91,7 +90,14 @@ export default function Hero({ fleetOpen, menuOpen }: HeroProps) {
           {/* Eyebrow */}
           <motion.div
             variants={textVariants}
-            style={{ marginBottom: 24, display: 'flex', alignItems: 'center', gap: 16 }}
+            style={{
+              marginBottom: 24,
+              display: 'flex',
+              alignItems: 'center',
+              gap: 16,
+              transform: menuOpen ? 'translateX(-120px)' : 'translateX(0)',
+              transition: 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
+            }}
           >
             <div style={{ width: 28, height: 1, background: 'rgba(255,255,255,0.5)' }} />
             <span
