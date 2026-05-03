@@ -151,7 +151,7 @@ select:-webkit-autofill {
   top: 18px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 40;
+  z-index: 1000;
   display: flex;
   align-items: center;
   height: 52px;
@@ -191,7 +191,7 @@ select:-webkit-autofill {
   position: fixed;
   top: 18px;
   right: 20px;
-  z-index: 100;
+  z-index: 1100;
   display: flex;
   align-items: center;
   gap: 0.7rem;
@@ -209,7 +209,7 @@ select:-webkit-autofill {
   letter-spacing: 0.22em;
   cursor: pointer;
   text-transform: uppercase;
-  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), right 0.8s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
 }
 
 .menu-toggle:hover {

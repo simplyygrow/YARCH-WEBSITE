@@ -95,8 +95,6 @@ export default function Hero({ fleetOpen, menuOpen }: HeroProps) {
               display: 'flex',
               alignItems: 'center',
               gap: 16,
-              transform: menuOpen ? 'translateX(-120px)' : 'translateX(0)',
-              transition: 'transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
             }}
           >
             <div style={{ width: 28, height: 1, background: 'rgba(255,255,255,0.5)' }} />
