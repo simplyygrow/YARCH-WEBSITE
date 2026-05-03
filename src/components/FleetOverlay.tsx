@@ -8,25 +8,26 @@ interface FleetOverlayProps {
 
 const fleetItems = [
   {
-    name: 'OCEAN ECLIPSE',
-    videoSrc: '/videos/fleet-ocean-eclipse.mp4',
-    delay: 0,
-    specs: [
-      { label: 'LENGTH', value: '162FT' },
-      { label: 'CRUISING SPEED', value: '14 KNOTS' },
-      { label: 'GUESTS', value: 'UP TO 12' },
-      { label: 'CABINS', value: '7 STATEROOMS' },
-    ],
-  },
-  {
     name: 'BLACK SOVEREIGN',
     videoSrc: '/videos/fleet-black-sovereign.mp4',
-    delay: 0.12,
+    delay: 0,
     specs: [
       { label: 'LENGTH', value: '138FT' },
       { label: 'TOP SPEED', value: '19 KNOTS' },
       { label: 'HULL', value: 'STEEL & ALUMINIUM' },
       { label: 'ENGINES', value: '2×MTU 12V 4000' },
+    ],
+  },
+  {
+    name: 'OCEAN ECLIPSE',
+    videoSrc: '/videos/fleet-ocean-eclipse.mp4',
+    delay: 0.12,
+    objectPosition: '40% center', // Just in case it needs minor centering as well
+    specs: [
+      { label: 'LENGTH', value: '162FT' },
+      { label: 'CRUISING SPEED', value: '14 KNOTS' },
+      { label: 'GUESTS', value: 'UP TO 12' },
+      { label: 'CABINS', value: '7 STATEROOMS' },
     ],
   },
   {

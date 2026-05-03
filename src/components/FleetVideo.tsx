@@ -6,9 +6,10 @@ interface FleetVideoProps {
   specs: { label: string; value: string }[];
   delay: number;
   isOpen: boolean;
+  objectPosition?: string;
 }
 
-export default function FleetVideo({ videoSrc, name, specs, delay }: FleetVideoProps) {
+export default function FleetVideo({ videoSrc, name, specs, delay, objectPosition }: FleetVideoProps) {
   return (
     <div
       style={{
@@ -43,6 +44,7 @@ export default function FleetVideo({ videoSrc, name, specs, delay }: FleetVideoP
             width: '100%',
             height: '100%',
             objectFit: 'cover',
+            objectPosition: objectPosition || 'center center',
             position: 'absolute',
             inset: 0,
           }}
