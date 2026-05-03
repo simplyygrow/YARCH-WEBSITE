@@ -109,7 +109,11 @@ export default function StaggeredMenu({ isOpen, onToggle, onFleetOpen }: Stagger
             CLOSE
           </span>
         </div>
-        <span className="menu-toggle-icon">+</span>
+        <div className="menu-toggle-icon">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 1L13 13M1 13L13 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          </svg>
+        </div>
       </button>
 
       {/* Prelayers */}
