@@ -148,7 +148,7 @@ select:-webkit-autofill {
 .menu-toggle {
   position: fixed;
   top: 18px; right: 20px;
-  z-index: 41;
+  z-index: 100;
   display: flex; align-items: center; gap: 0.7rem;
   padding: 0 20px;
   height: 52px;
@@ -185,7 +185,7 @@ body.fleet-open .menu-toggle {
 .menu-prelayer {
   position: fixed; top: 0; right: 0;
   width: var(--panel-width); height: 100%;
-  z-index: 39; transform: translateX(100%);
+  z-index: 98; transform: translateX(100%);
 }
 .menu-prelayer-1 { background: #1c3557; }
 .menu-prelayer-2 { background: #2d5080; }
@@ -194,7 +194,7 @@ body.fleet-open .menu-toggle {
 .menu-panel {
   position: fixed; top: 0; right: 0;
   width: var(--panel-width); height: 100%;
-  z-index: 40;
+  z-index: 99;
   background: var(--bg-base);
   color: var(--text-primary);
   transform: translateX(100%);
