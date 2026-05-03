@@ -42,7 +42,7 @@ export default function Header({ menuOpen, onBlogOpen, onFleetOpen, onJourneysOp
       style={{
         opacity: 1,
         pointerEvents: 'auto',
-        transform: menuOpen ? 'translateX(calc(-50% - 140px))' : 'translateX(-50%)',
+        transform: menuOpen ? 'translateX(calc(-50% - 240px))' : 'translateX(-50%)',
         transition: 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
       }}
     >
