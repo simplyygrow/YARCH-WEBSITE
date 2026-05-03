@@ -45,9 +45,6 @@ export default function StaggeredMenu({ isOpen, onToggle, onFleetOpen }: Stagger
       // Panel
       tl.to(panelRef.current, { x: 0, duration: 0.8, ease: 'power4.out' }, 0.15);
 
-      // Prelayers slide away - removed because panel covers them
-      // tl.to(prelayer1Ref.current, { x: '-100%', duration: 0.5, ease: 'power3.in' }, 0.5);
-      // tl.to(prelayer2Ref.current, { x: '-100%', duration: 0.5, ease: 'power3.in' }, 0.5);
 
       // Nav items stagger in
       const items = navItemsRef.current.filter(Boolean);
@@ -88,9 +85,9 @@ export default function StaggeredMenu({ isOpen, onToggle, onFleetOpen }: Stagger
       // Panel slides out
       tl.to(panelRef.current, { x: '100%', duration: 0.6, ease: 'power4.in' }, 0.2);
 
-      // Prelayers slide out to the right
-      tl.to(prelayer2Ref.current, { x: '100%', duration: 0.6, ease: 'power4.in' }, 0.25);
-      tl.to(prelayer1Ref.current, { x: '100%', duration: 0.6, ease: 'power4.in' }, 0.3);
+      // Reset prelayers
+      tl.set(prelayer1Ref.current, { x: '100%' });
+      tl.set(prelayer2Ref.current, { x: '100%' });
 
       // Label cycle back
       if (menuLabelRef.current && closeLabelRef.current) {

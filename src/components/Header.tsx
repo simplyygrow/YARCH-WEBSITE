@@ -36,16 +36,7 @@ export default function Header({ menuOpen, onBlogOpen, onFleetOpen, onJourneysOp
   ];
 
   return (
-    <div
-      ref={pillRef}
-      className="navbar-pill"
-      style={{
-        opacity: menuOpen ? 0 : 1,
-        pointerEvents: menuOpen ? 'none' : 'auto',
-        transform: 'translateX(-50%)',
-        transition: 'all 0.6s cubic-bezier(0.16,1,0.3,1)',
-      }}
-    >
+    <div ref={pillRef} className="navbar-pill">
       {/* Logo */}
       <div
         style={{
