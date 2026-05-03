@@ -32,6 +32,7 @@ function App() {
     <>
       {/* 1. Header */}
       <Header
+        menuOpen={menuOpen}
         onBlogOpen={() => setBlogOpen(true)}
         onFleetOpen={() => setFleetOpen(true)}
         onJourneysOpen={() => setJourneysOpen(true)}

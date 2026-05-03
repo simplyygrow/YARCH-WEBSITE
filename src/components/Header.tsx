@@ -9,7 +9,7 @@ interface HeaderProps {
   onAboutOpen: () => void;
 }
 
-export default function Header({ onBlogOpen, onFleetOpen, onJourneysOpen, onMembershipOpen, onAboutOpen }: Omit<HeaderProps, 'menuOpen'>) {
+export default function Header({ menuOpen, onBlogOpen, onFleetOpen, onJourneysOpen, onMembershipOpen, onAboutOpen }: HeaderProps) {
   const pillRef = useRef<HTMLDivElement>(null);
   const [joinBg, setJoinBg] = useState('#1c3557');
 
@@ -36,7 +36,16 @@ export default function Header({ onBlogOpen, onFleetOpen, onJourneysOpen, onMemb
   ];
 
   return (
-    <div ref={pillRef} className="navbar-pill">
+    <div
+      ref={pillRef}
+      className="navbar-pill"
+      style={{
+        opacity: 1,
+        pointerEvents: 'auto',
+        transform: menuOpen ? 'translateX(calc(-50% - 140px))' : 'translateX(-50%)',
+        transition: 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
+      }}
+    >
       {/* Logo */}
       <div
         style={{
