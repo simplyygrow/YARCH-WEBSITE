@@ -59,77 +59,88 @@ export default function Testimonials() {
         </h2>
       </div>
 
-      {/* Horizontal Scroll Rail */}
+      {/* Marquee Wrapper */}
       <div
-        className="testimonial-rail scrollbar-hide"
         style={{
-          display: 'flex',
-          overflowX: 'auto',
-          scrollSnapType: 'x mandatory',
-          gap: 20,
-          paddingLeft: 'clamp(24px,6vw,96px)',
-          paddingRight: 'clamp(24px,6vw,96px)',
+          width: '100%',
+          overflow: 'hidden',
+          position: 'relative',
         }}
       >
-        {testimonials.map((t, i) => (
-          <motion.div
-            key={i}
-            className="card"
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: '-20px' }}
-            transition={{
-              duration: 0.6,
-              ease: [0.22, 1, 0.36, 1],
-              delay: i * 0.07,
-            }}
-            style={{
-              flexShrink: 0,
-              width: 'clamp(280px,30vw,380px)',
-              padding: 36,
-            }}
-          >
-            <p
+        <motion.div
+          animate={{
+            x: [0, '-50%'],
+          }}
+          transition={{
+            duration: 35,
+            ease: 'linear',
+            repeat: Infinity,
+          }}
+          style={{
+            display: 'flex',
+            gap: 20,
+            paddingLeft: 'clamp(24px,6vw,96px)',
+            width: 'max-content',
+          }}
+        >
+          {/* Double the cards for seamless loop */}
+          {[...testimonials, ...testimonials].map((t, i) => (
+            <div
+              key={i}
+              className="card"
               style={{
-                fontStyle: 'italic',
-                fontSize: 12,
-                lineHeight: 1.9,
-                color: 'rgba(12,12,14,0.7)',
-                marginBottom: 28,
-                margin: '0 0 28px 0',
+                flexShrink: 0,
+                width: 'clamp(280px,30vw,380px)',
+                padding: 36,
+                background: 'rgba(255,255,255,0.4)',
+                backdropFilter: 'blur(10px)',
+                borderRadius: '2px',
+                border: '1px solid rgba(255,255,255,0.3)',
               }}
             >
-              "{t.quote}"
-            </p>
-            <div
-              style={{
-                width: 24,
-                height: 1,
-                background: 'var(--accent)',
-                marginBottom: 20,
-              }}
-            />
-            <div
-              style={{
-                fontSize: 11,
-                letterSpacing: '0.2em',
-                color: '#0c0c0e',
-                marginBottom: 4,
-              }}
-            >
-              {t.name}
+              <p
+                style={{
+                  fontStyle: 'italic',
+                  fontSize: 12,
+                  lineHeight: 1.9,
+                  color: 'rgba(12,12,14,0.7)',
+                  marginBottom: 28,
+                  margin: '0 0 28px 0',
+                }}
+              >
+                "{t.quote}"
+              </p>
+              <div
+                style={{
+                  width: 24,
+                  height: 1,
+                  background: 'var(--accent)',
+                  marginBottom: 20,
+                }}
+              />
+              <div
+                style={{
+                  fontSize: 11,
+                  letterSpacing: '0.2em',
+                  color: '#0c0c0e',
+                  fontWeight: 500,
+                  marginBottom: 4,
+                }}
+              >
+                {t.name}
+              </div>
+              <div
+                style={{
+                  fontSize: 9,
+                  letterSpacing: '0.15em',
+                  color: 'rgba(12,12,14,0.4)',
+                }}
+              >
+                {t.role} — {t.tag}
+              </div>
             </div>
-            <div
-              style={{
-                fontSize: 9,
-                letterSpacing: '0.2em',
-                color: 'rgba(12,12,14,0.4)',
-              }}
-            >
-              {t.role} · {t.tag}
-            </div>
-          </motion.div>
-        ))}
+          ))}
+        </motion.div>
       </div>
       </div>
     </section>

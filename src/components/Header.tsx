@@ -9,7 +9,7 @@ interface HeaderProps {
   onAboutOpen: () => void;
 }
 
-export default function Header({ menuOpen, onBlogOpen, onFleetOpen, onJourneysOpen, onMembershipOpen, onAboutOpen }: HeaderProps) {
+export default function Header({ onBlogOpen, onFleetOpen, onJourneysOpen, onMembershipOpen, onAboutOpen }: Omit<HeaderProps, 'menuOpen'>) {
   const pillRef = useRef<HTMLDivElement>(null);
   const [joinBg, setJoinBg] = useState('#1c3557');
 
