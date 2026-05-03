@@ -8,21 +8,10 @@ interface FleetOverlayProps {
 
 const fleetItems = [
   {
-    name: 'BLACK SOVEREIGN',
-    videoSrc: '/videos/fleet-black-sovereign.mp4',
-    delay: 0,
-    specs: [
-      { label: 'LENGTH', value: '138FT' },
-      { label: 'TOP SPEED', value: '19 KNOTS' },
-      { label: 'HULL', value: 'STEEL & ALUMINIUM' },
-      { label: 'ENGINES', value: '2×MTU 12V 4000' },
-    ],
-  },
-  {
     name: 'OCEAN ECLIPSE',
     videoSrc: '/videos/fleet-ocean-eclipse.mp4',
-    delay: 0.12,
-    objectPosition: '40% center', // Just in case it needs minor centering as well
+    delay: 0,
+    objectPosition: '40% center', // Kept centering in case they still want it
     specs: [
       { label: 'LENGTH', value: '162FT' },
       { label: 'CRUISING SPEED', value: '14 KNOTS' },
@@ -33,12 +22,23 @@ const fleetItems = [
   {
     name: 'AZURE HORIZON',
     videoSrc: '/videos/fleet-azure-horizon.mp4',
-    delay: 0.24,
+    delay: 0.12,
     specs: [
       { label: 'LENGTH', value: '120FT' },
       { label: 'RANGE', value: '4100NM' },
       { label: 'GUESTS', value: '8+12 CREW' },
       { label: 'DECK', value: 'SUN DECK WITH JACUZZI' },
+    ],
+  },
+  {
+    name: 'BLACK SOVEREIGN',
+    videoSrc: '/videos/fleet-black-sovereign.mp4',
+    delay: 0.24,
+    specs: [
+      { label: 'LENGTH', value: '138FT' },
+      { label: 'TOP SPEED', value: '19 KNOTS' },
+      { label: 'HULL', value: 'STEEL & ALUMINIUM' },
+      { label: 'ENGINES', value: '2×MTU 12V 4000' },
     ],
   },
 ];
