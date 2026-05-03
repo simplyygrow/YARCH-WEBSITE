@@ -56,7 +56,7 @@ export default function Hero({ fleetOpen, menuOpen }: HeroProps) {
             width: '100%',
             height: '100%',
             objectFit: 'cover',
-            objectPosition: 'center center',
+            objectPosition: '35% center',
           }}
         />
         <div
