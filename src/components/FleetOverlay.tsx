@@ -20,25 +20,25 @@ const fleetItems = [
     ],
   },
   {
-    name: 'BLACK SOVEREIGN',
-    videoSrc: '/videos/fleet-black-sovereign.mp4',
-    delay: 0.12,
-    specs: [
-      { label: 'LENGTH', value: '138FT' },
-      { label: 'TOP SPEED', value: '19 KNOTS' },
-      { label: 'HULL', value: 'STEEL & ALUMINIUM' },
-      { label: 'ENGINES', value: '2×MTU 12V 4000' },
-    ],
-  },
-  {
     name: 'AZURE HORIZON',
     videoSrc: '/videos/fleet-azure-horizon.mp4',
-    delay: 0.24,
+    delay: 0.12,
     specs: [
       { label: 'LENGTH', value: '120FT' },
       { label: 'RANGE', value: '4100NM' },
       { label: 'GUESTS', value: '8+12 CREW' },
       { label: 'DECK', value: 'SUN DECK WITH JACUZZI' },
+    ],
+  },
+  {
+    name: 'BLACK SOVEREIGN',
+    videoSrc: '/videos/fleet-black-sovereign.mp4',
+    delay: 0.24,
+    specs: [
+      { label: 'LENGTH', value: '138FT' },
+      { label: 'TOP SPEED', value: '19 KNOTS' },
+      { label: 'HULL', value: 'STEEL & ALUMINIUM' },
+      { label: 'ENGINES', value: '2×MTU 12V 4000' },
     ],
   },
 ];
